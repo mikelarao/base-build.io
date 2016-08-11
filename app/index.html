@@ -1,46 +1,180 @@
 <!DOCTYPE html>
 <html lang="en"></html>
 <head>
-  <title>Ground Zero - Base Build by Michael Arao</title>
+  <title>Base Build by Michael Arao</title>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="shortcut icon" href="favicon.ico"/>
+  <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="assets/css/main.css"/>
+  <link rel="stylesheet" href="assets/css/custom.css"/>
+  <link rel="stylesheet" href="assets/css/reject.css"/>
 </head>
 <body>
-  <div class="page-home">
-    <section>
-      <h1 class="page-title">Ground Zero</h1>
-      <h3>Base Gulp environment front-end build by Michael Arao</h3>
-      <p>Ground zero for your next project.</p>
-    </section>
-    <pre>DevTips-Starter-Kit
-| -- assets/
-|   | -- css/
-|   |   | -- 1-tools/
-|   |   |   | -- bourbon/
-|   |   |   | -- fonts.sass
-|   |   |   | -- normalize.sass
-|   |   |   | -- vars.sass
-|   |   | -- 2-basics/
-|   |   |   | -- body-elements.sass
-|   |   |   | -- links.sass
-|   |   |   | -- selection-colors.sass
-|   |   |   | -- typography.sass
-|   |   | -- 3-modules/
-|   |   |   | -- example-module.sass
-|   |   |   | -- example-module.sass
-|   |   | -- 4-pages/
-|   |   |   | -- example-page.sass
-|   |   | -- main.sass
-|   | -- js/
-|   |   | -- jquery.js
-|   |   | -- functions.js
-|   | -- img/
-| -- favicon.ico
-| -- readme.md
-| -- index.html</pre>
+
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">NavBar</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://github.com/mikelarao" target="_blank">mikelarao</a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 1 <b class="caret"></b></a>
+            <ul class="dropdown-menu multi-level">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+              <li class="dropdown-submenu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li class="dropdown-submenu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 2 <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+              <li class="dropdown-submenu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-submenu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-submenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <script src="vendors/jquery/dist/jquery.min.js"></script>
-  <script src="./assets/js/app.js"></script>
-</body>
+
+
+  <div class="page-home">
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-md-offset-3">
+
+        <section>
+          <h1 class="page-title">Base Gulp environment front-end build</h1>
+          <h3>by<br>Michael Arao</h3>
+          <p>a kit for every project.</p>
+
+        </section>
+
+        </div>
+
+        <div class="col-md-6 col-md-offset-3">
+
+        <section>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque voluptatibus consequatur neque cum nostrum officia quaerat amet perspiciatis maxime ducimus. Aliquam quos molestiae eaque numquam. Dicta sint hic cum soluta?</p>
+        </section>
+
+        <section>
+          <div class="btn btn-default">Test</div>
+        </section>
+
+        </div>
+
+      </div>
+    </div>
+
+    <pre>
+      | -- assets/
+      |   | -- css/
+      |   |   | -- 1-tools/
+      |   |   |   | -- bourbon/
+      |   |   |   | -- fonts.sass
+      |   |   |   | -- normalize.sass
+      |   |   |   | -- vars.sass
+      |   |   | -- 2-basics/
+      |   |   |   | -- body-elements.sass
+      |   |   |   | -- links.sass
+      |   |   |   | -- selection-colors.sass
+      |   |   |   | -- typography.sass
+      |   |   | -- 3-modules/
+      |   |   |   | -- example-module.sass
+      |   |   |   | -- example-module.sass
+      |   |   | -- 4-pages/
+      |   |   |   | -- example-page.sass
+      |   |   | -- main.sass
+      |   | -- js/
+      |   |   | -- jquery.js
+      |   |   | -- functions.js
+      |   | -- img/
+      | -- favicon.ico
+      | -- readme.md
+      | -- index.html</pre>
+    </div>
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
