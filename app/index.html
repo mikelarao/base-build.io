@@ -13,12 +13,11 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <!-- <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="" /></a> -->
-        <a class="navbar-brand" href="#">Brand</a>
+        <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="" /></a>
       </div>
 
 
@@ -49,7 +48,7 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-
+<!--
 
 
   <div class="page-home">
@@ -60,50 +59,57 @@
 
         <div class="col-md-6 col-md-offset-3">
 
-        <section>
+          <section>
 
 
 
 
-          <h1 class="page-title">Base <i>Gulp</i> + <i>Bootstrap</i> environment front-end build</h1>
-          <h3>by<br>Michael Arao</h3>
-          <p>a kit for every project.</p>
+            <h1 class="page-title">Base <i>Gulp</i> + <i>Bootstrap</i> environment front-end build</h1>
+            <h3>by<br>Michael Arao</h3>
+            <p>a kit for every project.</p>
 
-        </section>
+          </section>
 
         </div>
 
         <div class="col-md-6 col-md-offset-3">
 
-        <section>
-          <h1>Heading 1</h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4</h4>
-          <h5>Heading 5</h5>
-          <h6>Heading 6</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque voluptatibus consequatur neque cum nostrum officia quaerat amet perspiciatis maxime ducimus. Aliquam quos molestiae eaque numquam. Dicta sint hic cum soluta?</p>
-        </section>
+          <section>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque voluptatibus consequatur neque cum nostrum officia quaerat amet perspiciatis maxime ducimus. Aliquam quos molestiae eaque numquam. Dicta sint hic cum soluta?</p>
+          </section>
 
-        <section>
-          <div class="btn btn-default">Test</div>
-        </section>
+          <section>
+            <div class="btn btn-default">Test</div>
+          </section>
 
         </div>
 
       </div>
     </div>
 
-    </div>
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
-    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendors/modernizr/modernizr.custom.min.js"></script>
-    <script src="assets/js/jquery.placeholder.min.js"></script>
-    <script src="assets/js/jquery.reject.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-      $(function() {
-        $( '#dl-menu' ).dlmenu();
-      });
-    </script>
-  </body>
+  </div> -->
+
+  <script src="vendors/jquery/dist/jquery.min.js"></script>
+  <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendors/modernizr/modernizr.custom.min.js"></script>
+  <script src="assets/js/jquery.placeholder.min.js"></script>
+  <script src="assets/js/jquery.reject.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+
+  $(function() {
+    if($(window).width() <= 767){
+      $( '#dl-menu' ).dlmenu();
+    }
+  });
+
+  </script>
+</body>
+
+</html>
