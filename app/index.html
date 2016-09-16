@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="shortcut icon" href="favicon.ico"/>
   <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="vendors/fontawesome/css/font-awesome.min.css"/>
   <link rel="stylesheet" href="assets/css/main.css"/>
   <link rel="stylesheet" href="assets/css/custom.css"/>
   <link rel="stylesheet" href="assets/css/reject.css"/>
@@ -16,47 +17,35 @@
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+        <!-- <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="" /></a> -->
         <a class="navbar-brand" href="#">Brand</a>
       </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
+
+      <div id="dl-menu" class="dl-menuwrapper">
+        <button class="dl-trigger hidden-sm hidden-md hidden-lg"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <ul class="dl-menu">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li class="has-sub">
+            <a href="#">Products</a>
+            <ul class="dl-submenu">
+              <li><a href="#">Fixed Roofings</a></li>
+              <li><a href="#">Retractable Systems</a></li>
+              <li><a href="#">Parasol</a></li>
+              <li><a href="#">Mixed Product</a></li>
             </ul>
           </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
+          <li>
+            <a href="#">Gallery</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
           </li>
         </ul>
-      </div><!-- /.navbar-collapse -->
+      </div><!-- /dl-menuwrapper -->
+
     </div><!-- /.container-fluid -->
   </nav>
 
@@ -72,107 +61,7 @@
         <div class="col-md-6 col-md-offset-3">
 
         <section>
-          <div id="dl-menu" class="dl-menuwrapper">
-            <button class="dl-trigger">Open Menu</button>
-            <ul class="dl-menu">
-              <li>
-                <a href="#">Fashion</a>
-                <ul class="dl-submenu">
-                  <li>
-                    <a href="#">Men</a>
-                    <ul class="dl-submenu">
-                      <li><a href="#">Shirts</a></li>
-                      <li><a href="#">Jackets</a></li>
-                      <li><a href="#">Chinos &amp; Trousers</a></li>
-                      <li><a href="#">Jeans</a></li>
-                      <li><a href="#">T-Shirts</a></li>
-                      <li><a href="#">Underwear</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">Women</a>
-                    <ul class="dl-submenu">
-                      <li><a href="#">Jackets</a></li>
-                      <li><a href="#">Knits</a></li>
-                      <li><a href="#">Jeans</a></li>
-                      <li><a href="#">Dresses</a></li>
-                      <li><a href="#">Blouses</a></li>
-                      <li><a href="#">T-Shirts</a></li>
-                      <li><a href="#">Underwear</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">Children</a>
-                    <ul class="dl-submenu">
-                      <li><a href="#">Boys</a></li>
-                      <li><a href="#">Girls</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Electronics</a>
-                <ul class="dl-submenu">
-                  <li><a href="#">Camera &amp; Photo</a></li>
-                  <li><a href="#">TV &amp; Home Cinema</a></li>
-                  <li><a href="#">Phones</a></li>
-                  <li><a href="#">PC &amp; Video Games</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Furniture</a>
-                <ul class="dl-submenu">
-                  <li>
-                    <a href="#">Living Room</a>
-                    <ul class="dl-submenu">
-                      <li><a href="#">Sofas &amp; Loveseats</a></li>
-                      <li><a href="#">Coffee &amp; Accent Tables</a></li>
-                      <li><a href="#">Chairs &amp; Recliners</a></li>
-                      <li><a href="#">Bookshelves</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">Bedroom</a>
-                    <ul class="dl-submenu">
-                      <li>
-                        <a href="#">Beds</a>
-                        <ul class="dl-submenu">
-                          <li><a href="#">Upholstered Beds</a></li>
-                          <li><a href="#">Divans</a></li>
-                          <li><a href="#">Metal Beds</a></li>
-                          <li><a href="#">Storage Beds</a></li>
-                          <li><a href="#">Wooden Beds</a></li>
-                          <li><a href="#">Children's Beds</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Bedroom Sets</a></li>
-                      <li><a href="#">Chests &amp; Dressers</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Home Office</a></li>
-                  <li><a href="#">Dining &amp; Bar</a></li>
-                  <li><a href="#">Patio</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Jewelry &amp; Watches</a>
-                <ul class="dl-submenu">
-                  <li><a href="#">Fine Jewelry</a></li>
-                  <li><a href="#">Fashion Jewelry</a></li>
-                  <li><a href="#">Watches</a></li>
-                  <li>
-                    <a href="#">Wedding Jewelry</a>
-                    <ul class="dl-submenu">
-                      <li><a href="#">Engagement Rings</a></li>
-                      <li><a href="#">Bridal Sets</a></li>
-                      <li><a href="#">Women's Wedding Bands</a></li>
-                      <li><a href="#">Men's Wedding Bands</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div><!-- /dl-menuwrapper -->
+
 
 
 
@@ -208,8 +97,13 @@
     </div>
     <script src="vendors/jquery/dist/jquery.min.js"></script>
     <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendors/modernizr/modernizr.custom.min.js"></script>
     <script src="assets/js/jquery.placeholder.min.js"></script>
     <script src="assets/js/jquery.reject.min.js"></script>
-    <script src="assets/js/modernizr.custom.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      $(function() {
+        $( '#dl-menu' ).dlmenu();
+      });
+    </script>
   </body>

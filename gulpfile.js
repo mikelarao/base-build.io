@@ -5,6 +5,7 @@ plumber = require('gulp-plumber'),
 browserSync = require('browser-sync'),
 rename = require("gulp-rename"),
 sourcemaps = require('gulp-sourcemaps');
+autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('scripts', function() {
 	gulp.src('js/*.js')
@@ -19,6 +20,7 @@ gulp.task('scripts', function() {
 gulp.task('styles', function() {
 	return sass('sass/*.sass', { sourcemap: true, style: 'expanded' })
 	.on('error', sass.logError)
+	.pipe(autoprefixer())
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('app/assets/css/'))
 	.pipe(browserSync.reload({
