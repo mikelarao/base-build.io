@@ -4,7 +4,8 @@ $(document).ready(function(){
 
   $(".navbar-nav li").each( function() {
 
-    $(this).has("ul").append("<i class='fa fa-caret-down menu-caret'></i>").addClass("has-sub");
+    $(this).has("ul").find("a").append("<i class='fa fa-caret-down menu-caret'></i>");
+    $(this).has("ul").addClass("has-sub");
 
   });
 
