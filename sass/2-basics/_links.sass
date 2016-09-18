@@ -6,3 +6,25 @@ a
   &:hover,
   &:focus
     color: lighten(#0074D9, 20%)
+
+.btn
+  display: inline-block
+
+  &:hover, &:active, &:focus
+    text-decoration: none
+
+  &-success
+    border-radius: 3px
+    font-size: 14px
+    font-weight: bold
+    color: #fff
+    background-color: #2ecc37
+    text-align: center
+    line-height: 19px
+
+    &:hover, &:active, &:focus
+      color: $white
+
+    span
+      display: block
+      text-transform: uppercase

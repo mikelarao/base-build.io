@@ -1,10 +1,14 @@
 /* Common styles of Drilldown Menu */
+/*@media only screen and (min-width:480px) and (max-width: 767px){
+	.dl-menuwrapper {
+		max-width: 300px;
+	}
+}*/
+
 @media screen and (max-width: 767px){
 
 .dl-menuwrapper {
 	width: 100%;
-	max-width: 300px;
-	float: left;
 	position: relative;
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
@@ -12,15 +16,15 @@
 	perspective-origin: 50% 200%;
 }
 
-.dl-menuwrapper:first-child {
+/*.dl-menuwrapper:first-child {
 	margin-right: 100px;
-}
+}*/
 
 .dl-menuwrapper button {
 	background: #ccc;
 	border: none;
 	width: 48px;
-	height: 45px;
+	height: 52px;
 	overflow: hidden;
 	position: relative;
 	cursor: pointer;
@@ -89,9 +93,12 @@
 }
 
 .dl-menuwrapper .dl-menu {
-	margin: 5px 0 0 0;
 	position: absolute;
-	width: 100%;
+	/*margin: 0px 15px;*/
+	margin: 0px;
+	right: 15px;
+	left: 15px;
+	top: 80px;
 	opacity: 0;
 	pointer-events: none;
 	-webkit-transform: translateY(10px);
@@ -141,10 +148,10 @@ All this is done for any sub-level being entered.
 /* Dynamically added submenu outside of the menu context */
 .dl-menuwrapper > .dl-submenu {
 	position: absolute;
-	width: 100%;
-	top: 50px;
-	left: 0;
-	margin: 0;
+	top: 80px;
+	right: 15px;
+	left: 15px;
+	margin: 0px;
 }
 
 /* Animation classes for moving out and in */
