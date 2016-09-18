@@ -1,4 +1,48 @@
 .navbar
+  position: fixed
+  width: 100%
   margin-bottom: 0px
-  border-width: 0 0 1px
+  border-width: 0 0 0px
   background-color: $white
+  border-radius: 0px
+  z-index: 1
+
+  >.container
+
+    .navbar-header
+      @media screen and (min-width: 768px)
+        width: 100%
+
+      a.navbar-brand
+        margin-left: 0px
+        height: auto
+        padding: 10px 15px
+
+        img
+          width: 120px
+
+        @media screen and (min-width: 768px)
+          padding: 4px 0px
+
+          img
+            width: auto
+
+      .dl-menuwrapper
+        @media screen and (min-width: 768px)
+          float: right
+
+        .contact
+          float: right
+          margin: 10px 0px
+          padding: 7px 10px
+
+          @media screen and (min-width: 768px)
+            padding: 7px 27px
+            margin: 20px 0px
+
+        .dl-trigger
+          float: right
+          margin: 10px
+
+          @media screen and (min-width: 768px)
+            float: right

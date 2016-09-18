@@ -1,12 +1,19 @@
 .dl-menuwrapper
-  float: left
-
   @media screen and (min-width: 768px)
+
+    float: right
+
     .dl-menu
       list-style: none
       float: left
       padding: 0px
-      margin: 0px
+      margin: 0px 10px 0px 0px
+
+      .current-menu-item
+        >a
+          text-decoration: none
+          color: $white
+          background-color: $gray
 
       >li
         float: left
@@ -22,11 +29,7 @@
 
 
         >a
-          padding:
-            top: 39px
-            right: 15px
-            bottom: 39px
-            left: 15px
+          padding: 35.5px 15px
           cursor: pointer
 
         &.has-sub
@@ -51,6 +54,7 @@
           a
             width: 100%
             padding: 6px 21px
+
 
         .dl-back
           display: none
