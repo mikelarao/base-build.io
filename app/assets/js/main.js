@@ -2,9 +2,10 @@ $(document).ready(function(){
 
   // -------------- Main Menu Jquery
 
-  $(".navbar-nav li").each( function() {
+  $(".main-menu li").each( function() {
 
-    $(this).has("ul").append("<i class='fa fa-caret-down menu-caret'></i>").addClass("has-sub");
+    $(this).has("ul").addClass("has-sub");
+    $(this).has("ul").find("> a").append("<i class='fa fa-caret-down menu-caret hidden-xs'></i>").addClass("has-sub");
 
   });
 

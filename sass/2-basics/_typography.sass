@@ -1,51 +1,335 @@
-//	Headings
+// Wordpress Typography
 
-.gigantic, .huge, .large, .bigger, .big,
+// Body
+
+// @font-face
+//   font-family: 'Helvetica'
+//   src: url('../fonts/Helvetica.eot?#iefix') format("embedded-opentype"), url('../fonts/Helvetica.otf') format("opentype"), url('../fonts/Helvetica.woff') format("woff"), url('../fonts/Helvetica.ttf') format("truetype"), url('../fonts/Helvetica.svg#Helvetica') format("svg")
+//   font-weight: normal
+//   font-style: normal
+//
+// @font-face
+//   font-family: 'Helvetica-Bold'
+//   src: url('../fonts/Helvetica-Bold.eot?#iefix') format("embedded-opentype"), url('../fonts/Helvetica-Bold.otf') format("opentype"), url('../fonts/Helvetica-Bold.woff') format("woff"), url('../fonts/Helvetica-Bold.ttf') format("truetype"), url('../fonts/Helvetica-Bold.svg#Helvetica-Bold') format("svg")
+//   font-weight: normal
+//   font-style: normal
+//
+// body
+//   color: #1a1a1a
+//   font-family: 'Helvetica'
+//   text-rendering: optimizeLegibility
+//   font-size: 16px
+//   font-weight: 400
+//   line-height: 1.75
+//   max-width: 600px
+//   vertical-align: baseline
+//
+//   &.post-type-page
+//     max-width: 840px
+
+// Typography
+
+body
+  background-color: white
+  font-family: 'Open Sans', sans-serif
+  text-rendering: optimizeLegibility
+  font-size: 14px
+  line-height: 1.6
+  color: #666
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%
+
 h1, h2, h3, h4, h5, h6
-  color: #222
-  font-weight: bold
+  clear: both
+  font-weight: 700
+  margin: 56px 0 28px
+  font-family: 'Open Sans', sans-serif
+  text-rendering: optimizeLegibility
+  margin-top: 0
 
-.gigantic
-  font-size: 110px
-  line-height: 1.09
-  letter-spacing: -2px
+h1
+  font-size: 72px
 
-.huge, h1
-  font-size: 68px
-  line-height: 1.05
-  letter-spacing: -1px
+h2
+  font-size: 3.214em
 
-.large, h2
-  font-size: 42px
-  line-height: 1.14
+h3
+  font-size: 2.143em
+  line-height: 1.6
 
-.bigger, h3
-  font-size: 26px
-  line-height: 1.38
+h4, h5, h6
+  font-size: 19px
+  line-height: 1.1052631579
 
-.big, h4
-  font-size: 22px
-  line-height: 1.38
+h4
+  letter-spacing: 0.13333em
+  text-transform: uppercase
 
-.small, small
-  font-size: 10px
-  line-height: 1.2
-
-
-// Basic Text Style
-
-p
-  margin: 0 0 20px 0
-
-em
+h6
   font-style: italic
 
-strong
-  font-weight: bold
+p
+  margin: 0pc !important
+
+b, strong
+  font-weight: 700
+
+dfn, cite, em, i
+  font-style: italic
+
+blockquote
+  border-left: 4px solid #1a1a1a
+  color: #686868
+  font-size: 19px
+  font-style: italic
+  line-height: 1.4736842105
+  margin-bottom: 28px
+  padding: 0 0 0 24px
+
+  &:not(.alignleft):not(.alignright)
+    margin-left: -28px
+
+  blockquote:not(.alignleft):not(.alignright)
+    margin-left: 0
+
+  &:before
+    content: ""
+    display: table
+
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+  > :last-child
+    margin-bottom: 0
+
+  cite, small
+    color: #1a1a1a
+    font-size: 16px
+    line-height: 1.75
+
+  em, i, cite
+    font-style: normal
+
+  strong, b
+    font-weight: 400
+
+  &.alignleft, &.alignright
+    border: 0 solid #1a1a1a
+    border-top-width: 4px
+    padding: 18px 0 0
+    width: -webkit-calc(50% - 14px)
+    width: calc(50% - 14px)
+
+address
+  font-style: italic
+  margin: 0 0 28px
+
+code, kbd, tt, var, samp
+  font-family: Inconsolata, monospace
+
+pre
+  font-family: Inconsolata, monospace
+  border: 1px solid #d1d1d1
+  font-size: 16px
+  line-height: 1.3125
+  margin: 0 0 28px
+  max-width: 100%
+  overflow: auto
+  padding: 14px
+  white-space: pre
+  white-space: pre-wrap
+  word-wrap: break-word
+
+code
+  background-color: #d1d1d1
+  padding: 2px 4px
+
+abbr[title]
+  border-bottom: 1px dotted #d1d1d1
+  cursor: help
+
+mark, ins
+  background: #007acc
+  color: #fff
+  padding: 2px 4px
+  text-decoration: none
+
+sup
+  font-size: 75%
+  height: 0
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sub
+  font-size: 75%
+  height: 0
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+  top: -6px
+
+sup
+  bottom: -3px
+
+small
+  font-size: 80%
+
+big
+  font-size: 125%
+
+// Elements
 
 hr
-  border: solid #ddd
-  border-width: 1px 0 0
+  background-color: #d1d1d1
+  border: 0
+  height: 1px
+  margin-bottom: 28px
+
+ul, ol
+  margin: 0 0 28px 0
+  padding: 0
+
+ul
+  list-style: disc
+
+ol
+  list-style: decimal
+
+li >
+  ul, ol
+    margin-bottom: 0
+
+  ul
+    margin-left: 20px
+
+blockquote > ul
+  margin-left: 20px
+
+li > ol, blockquote > ol
+  margin-left: 24px
+
+dl
+  margin: 0 0 28px
+
+dt
+  font-weight: bold
+
+dd
+  margin: 0 0 28px
+
+table, th, td
+  border: 1px solid #d1d1d1
+
+.mce-item-table
+  border: 1px solid #d1d1d1
+
+  th, td
+    border: 1px solid #d1d1d1
+
+table
+  a
+    color: #007acc
+
+  border-collapse: separate
+  border-spacing: 0
+  border-width: 1px 0 0 1px
+  margin: 0 0 28px
+  width: 100%
+
+.mce-item-table
+  border-collapse: separate
+  border-spacing: 0
+  border-width: 1px 0 0 1px
+  margin: 0 0 28px
+  width: 100%
+
+table th, .mce-item-table th
+  border-width: 0 1px 1px 0
+  font-size: 16px
+  font-weight: 700
+  padding: 7px
+  text-align: left
+  vertical-align: baseline
+
+table
+  caption
+    border-width: 0 1px 1px 0
+    font-size: 16px
+    font-weight: 700
+    padding: 7px
+    text-align: left
+    vertical-align: baseline
+
+  td
+    border-width: 0 1px 1px 0
+    font-size: 16px
+    padding: 7px
+    vertical-align: baseline
+
+.mce-item-table td
+  border-width: 0 1px 1px 0
+  font-size: 16px
+  padding: 7px
+  vertical-align: baseline
+
+img
+  border: 0
+  height: auto
+  max-width: 100%
+  vertical-align: middle
+
+a img
+  display: block
+
+figure
+  margin: 0
+
+del
+  opacity: 0.8
+
+// a
+//   box-shadow: 0 1px 0 0 currentColor
+//   color: #007acc
+//   text-decoration: none
+
+fieldset
+  border: 1px solid #d1d1d1
+  margin: 0 0 28px
+  padding: 14px
+
+// Alignment
+
+.alignleft
+  float: left
+  margin: 6px 28px 28px 0
+
+.alignright
+  float: right
+  margin: 6px 0 28px 28px
+
+.aligncenter
   clear: both
-  margin: 10px 0 30px
-  height: 0
+  display: block
+  margin: 0 auto 28px
+
+// Audio/Video
+
+.wp-audio-shortcode a, .wp-playlist a
+  box-shadow: none
+
+.mce-content-body
+  .wp-audio-playlist
+    margin: 0
+    padding-bottom: 0
+
+  .wp-playlist-tracks
+    margin-top: 0
+
+  .wp-playlist-item
+    padding: 10px 0
+
+  .wp-playlist-item-length
+    top: 10px

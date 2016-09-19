@@ -1,11 +1,29 @@
 body
-  background-color: white
-  font-family: 'Open Sans', sans-serif
-  font-size: 14px
-  line-height: 1.6
-  color: #666
-  -webkit-font-smoothing: antialiased
-  -webkit-text-size-adjust: 100%
+  font-size: 12px
+
+  @media screen and (min-width: 768px)
+    font-size: 14px
 
   *
-    transition: all 0.5s ease
+    transition: all 0.3s ease
+
+
+.page
+  padding-top: 72px
+
+  .btn
+    margin-top: 2em
+    padding-right: 5em
+    padding-left: 5em
+
+  @media screen and (min-width: 768px)
+    padding-top: 93px
+
+.pane
+  padding: 2.857em 0px
+
+  &.welcome
+    background-color: $white
+
+  &.contact
+    background-color: $white

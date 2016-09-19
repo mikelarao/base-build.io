@@ -28,7 +28,6 @@ gulp.task('styles', function() {
 	}))
 });
 
-
 gulp.task('browserSync', function() {
 	browserSync({
 		server: {

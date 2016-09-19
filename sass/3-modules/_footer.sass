@@ -1,0 +1,46 @@
+footer
+  padding: 30px 0
+  background-color: $gray
+
+  .promotion
+    display: flex
+    align-items: center
+    justify-content: center
+    list-style: none
+    margin-bottom: 0px
+
+    li
+
+      a
+        display: inline-block
+        padding: 0px 15px
+
+  .footer-menu
+    display: inline-block
+    list-style: none
+    @media screen and (min-width: 768px)
+      float: right
+    margin-bottom: 1em
+
+    li
+      float: left
+
+      &+li
+        &:before
+          content: "|"
+          color: $white
+
+      &:last-child
+        padding-right: 0px
+
+      &:first-child
+
+
+      a
+        padding: 0px 7px
+        color: $white
+
+  p
+    @media screen and (min-width: 768px)
+      float: right
+    color: $white
