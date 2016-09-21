@@ -21,7 +21,7 @@
 }*/
 
 .dl-menuwrapper button {
-	background: #ccc;
+	background: #e2e3e5;
 	border: none;
 	width: 48px;
 	height: 52px;
@@ -32,9 +32,13 @@
 }
 
 .dl-menuwrapper button:hover,
-.dl-menuwrapper button.dl-active,
+.dl-menuwrapper button.dl-active{
+	background-color: #58626c;
+	color: #fff;
+}
+
 .dl-menuwrapper ul {
-	background: #aaa;
+	background-color: #fff;
 }
 
 
@@ -55,18 +59,24 @@
 	padding: 15px 20px;
 	font-size: 16px;
 	line-height: 20px;
-	font-weight: 300;
-	color: #fff;
+	color: #000;
 	outline: none;
 }
+
 
 .no-touch .dl-menuwrapper li a:hover {
 	background: rgba(255,248,213,0.1);
 }
 
+.dl-menuwrapper .dl-menu li a:hover, .dl-menuwrapper  .dl-menu li a:active, .dl-menuwrapper  .dl-menu li a:focus{
+	background: #58626c;
+	color: #fff
+}
+
+
 .dl-menuwrapper li.dl-back > a {
 	padding-left: 30px;
-	background: rgba(0,0,0,0.1);
+	background: #e2e3e5;
 }
 
 .dl-menuwrapper li.dl-back:after,
@@ -78,13 +88,22 @@
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 	content: "\f0da";
+	color: #000;
 }
 
 .dl-menuwrapper li.dl-back:after {
 	left: 10px;
-	color: rgba(212,204,198,0.3);
+	color: #000;
 	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
+}
+
+.dl-menuwrapper li:hover > a:after{
+	color: #fff;
+}
+
+.dl-menuwrapper li.dl-back:hover:after{
+	color: #fff;
 }
 
 .dl-menuwrapper li > a:after {
@@ -98,7 +117,7 @@
 	margin: 0px;
 	right: 15px;
 	left: 15px;
-	top: 80px;
+	top: 72px;
 	opacity: 0;
 	pointer-events: none;
 	-webkit-transform: translateY(10px);
@@ -106,7 +125,9 @@
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	z-index: 1;
+	background-color: #fff;
 }
+
 
 .dl-menuwrapper .dl-menu.dl-menu-toggle {
 	transition: all 0.3s ease;
@@ -148,7 +169,7 @@ All this is done for any sub-level being entered.
 /* Dynamically added submenu outside of the menu context */
 .dl-menuwrapper > .dl-submenu {
 	position: absolute;
-	top: 80px;
+	top: 72px;
 	right: 15px;
 	left: 15px;
 	margin: 0px;
@@ -321,7 +342,7 @@ All this is done for any sub-level being entered.
 }
 
 /* Colors for demos */
-
+/*
 /* Demo 1 */
 .demo-1 .dl-menuwrapper button {
 	background: #c62860;
@@ -331,7 +352,7 @@ All this is done for any sub-level being entered.
 .demo-1 .dl-menuwrapper button.dl-active,
 .demo-1 .dl-menuwrapper ul {
 	background: #9e1847;
-}
+}*/
 
 
 }

@@ -1,0 +1,49 @@
+.map-wrap
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2)
+  @media screen and (min-width: 768px)
+    margin:
+      top: 30px
+      bottom: 30px
+  iframe
+    @media screen and (min-width: 320px)
+      height: 400px!important
+    @media screen and (min-width: 480px)
+      height: 450px!important
+    @media screen and (min-width: 768px)
+      height: 500px!important
+    @media screen and (min-width: 992px)
+      height: 600px!important
+
+.contact-pane
+  @media screen and (min-width: 768px)
+    margin:
+      top: 30px
+      bottom: 30px
+  padding: 30px
+  background-color: $white
+
+  &--details
+    ul
+      list-style: none
+      padding-left: 0px
+      li
+        margin-bottom: 5px
+        text-align: center
+        a
+          color: $gray
+
+  form
+    input.form-control +  input.form-control
+      margin-top: 15px
+
+    input:last-of-type
+      margin-bottom: 15px
+      @media screen and (min-width: 768px)
+        margin-bottom: 0px
+
+    textarea
+      max-height: 132px
+      resize: none
+
+    .contact:first-letter
+      font-family: FontAwesome

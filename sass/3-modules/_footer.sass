@@ -1,0 +1,51 @@
+footer
+  padding: 30px 0
+  background-color: $gray
+
+  .promotion
+    display: flex
+    align-items: center
+    justify-content: center
+    list-style: none
+    margin-bottom: 0px
+
+    li
+
+      a
+        display: inline-block
+        padding: 0px 15px
+
+  .footer-menu
+    display: inline-block
+    list-style: none
+    margin-top: 2ççem
+    @media screen and (min-width: 992px)
+      margin-top: 0em
+      float: right
+    margin-bottom: 1em
+
+    li
+      @media screen and (min-width: 480px)
+        float: left
+
+      @media screen and (min-width: 480px)
+        &+li
+          &:before
+            content: "|"
+            color: $white
+
+      &:last-child
+        padding-right: 0px
+
+      &:first-child
+
+
+      a
+        @media screen and (min-width: 480px)
+          padding: 0px 7px
+        color: $white
+
+  p
+    @media screen and (min-width: 992px)
+      float: right
+    color: $white
