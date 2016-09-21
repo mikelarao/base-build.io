@@ -12,6 +12,16 @@
 
       .img-responsive
         width: 100%
+        @media screen and (min-width: 320px)
+          height: 89px
+        @media screen and (min-width: 480px)
+          height: 138px
+        @media screen and (min-width: 768px)
+          height: 222px
+        @media screen and (min-width: 992px)
+          height: 289px
+        @media screen and (min-width: 1280px)
+          height: 350px
 
       &--caption
         background: $black
@@ -21,7 +31,7 @@
           position: absolute
           top: 0
           bottom: 0
-          background: rgba(0,0,0,0.75)
+          background: $transblack
           display: flex
           align-items: center
           justify-content: center
