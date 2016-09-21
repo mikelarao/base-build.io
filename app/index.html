@@ -17,39 +17,33 @@
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
         <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="" /></a>
-
-        <div id="dl-menu" class="dl-menuwrapper">
-          <button class="dl-trigger hidden-sm hidden-md hidden-lg"><i class="fa fa-bars" aria-hidden="true"></i></button>
-          <ul class="dl-menu main-menu">
-            <li class="current-menu-item">
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="products.html">Products</a>
-              <ul class="dl-submenu">
-                <li><a href="products-category.html">Fixed Roofings</a></li>
-                <li><a href="products-category.html">Retractable Systems</a></li>
-                <li><a href="products-category.html">Parasol</a></li>
-                <li><a href="products-category.html">Mixed Product</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="gallery.html">Gallery</a>
-            </li>
-            <li>
-              <a href="contact-us.html">Contact Us</a>
-            </li>
-          </ul>
-
-          <a class="btn btn-success contact" href="#"><span><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</span>+65 6456 6757</a>
-
-
-        </div><!-- /dl-menuwrapper -->
-
       </div>
 
+      <a class="btn btn-success contact" href="#"><span><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</span>+65 6456 6757</a>
 
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="current-menu-item"><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Products </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Fixed Roofings</a></li>
+              <li><a href="#">Retractable Systems</a></li>
+              <li><a href="#">Parasol</a></li>
+              <li><a href="#">Mixed Product</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
 
     </div><!-- /.container-fluid -->
   </nav>
@@ -57,7 +51,7 @@
 
 
 
-<div class="page page-home">
+  <div class="page-wrap page-home">
 
     <div id="home-carousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -284,22 +278,22 @@
 
 </div>
 
-  <script src="vendors/jquery/dist/jquery.min.js"></script>
-  <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
-  <script src="vendors/modernizr/modernizr.custom.min.js"></script>
-  <script src="assets/js/jquery.placeholder.min.js"></script>
-  <script src="assets/js/jquery.reject.min.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script>
+<script src="vendors/jquery/dist/jquery.min.js"></script>
+<script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendors/modernizr/modernizr.custom.min.js"></script>
+<script src="assets/js/jquery.placeholder.min.js"></script>
+<script src="assets/js/jquery.reject.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
 
-  $(function() {
-    if($(window).width() <= 767){
-      $( '#dl-menu' ).dlmenu();
-    }
-  });
+$(function() {
+  if($(window).width() <= 767){
+    $( '#dl-menu' ).dlmenu();
+  }
+});
 
 
-  </script>
+</script>
 </body>
 
 </html>
