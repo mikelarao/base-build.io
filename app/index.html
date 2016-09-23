@@ -15,15 +15,9 @@
 
   <!-- PRELOADER -->
   <div class="info-preloader" id="pre_loader_block" style="display:block; width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2147483647; background: rgb(255, 255, 255);">
-    <div class="process-logo" style="background	: url('') center center no-repeat;">
+    <div class="process-logo" style="background	: url('assets/images/logo.png') center center no-repeat;">
       <div class="progress">
         <div class="indeterminate"></div>
-      </div>
-
-      <div class="container">
-        <div class="row text-center">
-          <h1>LOGO HERE</h1>
-        </div>
       </div>
 
       <div class="progress" style="position:absolute; bottom:0;">
@@ -34,13 +28,81 @@
   <!-- END/PRELOADER -->
 
 
+  <header>
+
+    <nav class="navbar navbar-default">
+
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Brand</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something</a></li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Link</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Dropdown</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </nav><!--end of navigation-->
+
+  </header>
+
+  <div class="page-wrap">
+
+    Content!
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+
+      I'm the Sticky Footer.
+    </div>
+  </footer>
+
+
+
   <script src="vendors/jquery/dist/jquery.min.js"></script>
   <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/jquery.placeholder.min.js"></script>
   <script src="assets/js/jquery.reject.min.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- <script>
+  <script>
   $(document).ready(function() {
     $('#pre_loader_block').attr('style', function(i, style)
     {
@@ -48,7 +110,7 @@
 
     });
   });
-  </script> -->
+  </script>
 
 </body>
 
