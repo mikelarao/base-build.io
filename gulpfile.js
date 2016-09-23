@@ -21,7 +21,7 @@ gulp.task('styles', function() {
 	return sass('sass/*.sass', { sourcemap: true, style: 'expanded' })
 	.on('error', sass.logError)
 	.pipe(autoprefixer())
-	//.pipe(sourcemaps.write())
+	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('app/assets/css/'))
 	.pipe(browserSync.reload({
 		stream: true

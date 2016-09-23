@@ -1,6 +1,4 @@
 .navbar
-  *
-    transition: none
   position: fixed
   width: 100%
   margin-bottom: 0px
@@ -13,7 +11,8 @@
   >.container
 
     .navbar-header
-      float: left
+      @media screen and (min-width: 768px)
+        // width: 100%
 
       a.navbar-brand
         margin-left: 0px
@@ -29,96 +28,83 @@
           img
             width: auto
 
-    .navbar-collapse
-      width: 100%
-      @media screen and (max-width: 767px)
-        margin: 0px
+    .navbar-nav
+      margin: 15px 0px
       @media screen and (min-width: 768px)
-        width: auto
-        float: right
+        margin: 0px 12px 0px 0px
+      >li
+        >a
+          @media screen and (min-width: 768px)
+            padding: 37px 12px
+          color: $black
+          border: 0px
 
-      .nav
+      li.current-menu-item, li.current-menu-ancestor
+        >a
+          color: $white
+          background: $gray
 
-        >li
+      li
+        &:hover, &:focus, &:active
+          >a, >i
+            color: $white
+            background: $gray
 
-          >a
-            border: 0px solid red
-            @media screen and (min-width: 768px)
-              padding: 37px 15px
 
-            &:hover, &:focus, &:active
-              background-color: $gray
-              color: $white
-
-          &.current-menu-item
+      li
+        @media screen and (max-width: 767px)
+          & + li
             a
-              background-color: $gray
-              color: $white
-
-        li.has-sub
+              border-top: 1px solid #ddd
+        &.has-sub
           @media screen and (max-width: 767px)
-            >a
-              width: 80%
-            >i
+            &.open
+              >a
+                color: $white
+                background: $gray
+
+            position: relative
+            .toggle-sub
               position: absolute
-              top: 15px
-              right: 15px
+              top: 0
+              right: 0
+              padding: 13px 15px
+              border: 1px solid #ddd
+
+
+            .dropdown-menu
+              width: auto
+              transition: all 0s ease
+              margin: 15px
+              border: 1px solid #ddd
+              li:first-child
+                a
+                  border: 0px solid transparent
+
           @media screen and (min-width: 768px)
             &:hover
-              .dropdown-menu
-                display: inline-block
-          .dropdown-menu
-            width: 100%
-            @media screen and (min-width: 768px)
-              width: auto
-              margin:
-                left: -40%
-                right: -40%
+              >a
 
-            li
-              a
-                color: $gray
-                &:hover, &:focus, &:active
-                  background-color: $gray
-                  color: $white
+              ul.dropdown-menu
+                display: inline-block!important
 
-          &:hover, &:focus, &:active
-            @media screen and (min-width: 768px)
-              background-color: $gray
-              color: $white
+          a
+            i
+              @media screen and (min-width: 768px)
+                margin-left: 5px
 
-            // >a
-            //   color: $white
-            //   float: left
-            //
-            // >i
-            //   color: $white
-
-          @media screen and (min-width: 768px)
-            >a
-              padding: 37px 0px 37px 15px
-              float: left
-            >i
-              float: left
-              margin-left: -1px
-              padding: 40px 10px 40px 5px
-
-          &.open
-            i, > a
-              background-color: $gray
-              color: $white
 
     .contact
+      &.visible-xs
+        float: left
+        margin: 13px 10px
+        padding: 6px 15px
+        font-size: 12px
       @media screen and (min-width: 768px)
         float: right
+      margin: 16px 0px
 
-
-  .contact
-    margin: 7px
-    float: right
-    @media screen and (min-width: 768px)
-      margin: 17px 0px
-
-.dropdown-menu
-  @media screen and (max-width: 767px)
-    position: relative
+    .navbar-toggle
+      margin: 13px 15px 13px 0px
+      border-radius: 0px
+      padding: 15px

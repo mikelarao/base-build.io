@@ -1,95 +1,66 @@
 $(document).ready(function(){
 
-  // -------------- Main Menu Jquery
+// -------------- Main Menu Jquery
 
-  $(".navbar-nav li").each( function() {
+$(".navbar-nav li").each( function() {
 
-    $(this).has("ul").append("<i class='fa fa-caret-down menu-caret' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'></i>").addClass("has-sub");
-    $(this).has("ul").append("<span class='clearfix'></span>");
+  $(this).has("ul").append("<i class='fa fa-caret-down toggle-sub visible-xs menu-caret'></i>").addClass("has-sub");
 
-  });
+  $(this).has("ul").find(">a").append("<i class='fa fa-caret-down hidden-xs menu-caret'></i>");
 
-  $(window).on("resize", function () {
+});
 
-    if ( $(window).width() >= 768 ){
+$(window).on("resize", function () {
 
-      $(".navbar-nav li:has(ul) .dropdown-menu").each( function() {
+  if ( $(window).width() >= 768 ){
+
+    $(".navbar-nav li:has(ul) .dropdown-menu").each( function() {
 
         var subWidth = $(this).outerWidth();
 
         $(this).css({ "margin-left" : - subWidth / 2 + "px", "left" : "50%", "display" : "none", "width" : subWidth });
 
-      });
+    });
 
-      $(".navbar-nav li:has(ul)").removeClass("open collapsible");
+    $(".navbar-nav li:has(ul)").removeClass("open collapsible");
 
-    }
+  }
 
-    else {
+  else {
 
-      $(".dropdown-menu").removeAttr( 'style' );
+    $(".dropdown-menu").removeAttr( 'style' );
 
-    }
+  }
 
-  }).resize();
+}).resize();
 
+$( ".navbar-nav .fa-caret-down" ).on( "click", function() {
 
+  $(this).parent().find(".dropdown-menu").stop().slideToggle( "fast", function() {
 
-  $(window).on("resize", function () {
-
-    if ( $(window).width() <= 1200 ){
-
-
-      $( ".navbar-nav .fa-caret-down" ).on( "click", function() {
-
-        $(this).parent().find(".dropdown-menu").stop().slideToggle( "fast", function() {
-
-          $(this).parent().toggleClass("open collapsible");
-
-        });
-
-      });
-
-    }
-
-    else {
-
-      $(".dropdown-menu").removeAttr( 'style' );
-
-    }
-
-  }).resize();
-
-
-  // -------------- Placeholder Jquery
-
-  $('input, textarea').placeholder();
-
-  // -------------- Reject IE Jquery
-
-  $.reject({
-
-    reject : {
-      all: false,
-      msie: 8
-    },
-    display: ['firefox','chrome','safari'],
-    imagePath: 'assets/images/'
+    $(this).parent().toggleClass("open collapsible");
 
   });
 
-  // -------------- New Jquery
+});
 
-// multilevel drilldown-menu
-  // add class on scrol
-  // $(window).scroll(function() {
-  //     var scroll = $(window).scrollTop();
-  //
-  //     if (scroll >= 1) {
-  //         $(".navbar").addClass("navbar-fixed-top");
-  //     } else {
-  //         $(".navbar").removeClass("navbar-fixed-top");
-  //     }
-  // });
+// -------------- Placeholder Jquery
+
+$('input, textarea').placeholder();
+
+// -------------- Reject IE Jquery
+
+$.reject({
+
+  reject : {
+      all: false,
+      msie: 8
+  },
+  display: ['firefox','chrome','safari'],
+  imagePath: 'assets/images/'
+
+});
+
+// -------------- New Jquery
 
 });
