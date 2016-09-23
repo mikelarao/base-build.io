@@ -12,7 +12,7 @@
 
     .navbar-header
       @media screen and (min-width: 768px)
-        width: 100%
+        // width: 100%
 
       a.navbar-brand
         margin-left: 0px
@@ -28,25 +28,83 @@
           img
             width: auto
 
-      .dl-menuwrapper
-        @media screen and (min-width: 768px)
-          float: right
+    .navbar-nav
+      margin: 15px 0px
+      @media screen and (min-width: 768px)
+        margin: 0px 12px 0px 0px
+      >li
+        >a
+          @media screen and (min-width: 768px)
+            padding: 37px 12px
+          color: $black
+          border: 0px
 
-        .contact
-          float: right
-          margin: 10px 0px
-          padding: 7px 5px
-          @media screen and (min-width: 480px)
-            padding: 7px 10px
-          line-height: 19px
+      li.current-menu-item, li.current-menu-ancestor
+        >a
+          color: $white
+          background: $gray
+
+      li
+        &:hover, &:focus, &:active
+          >a, >i
+            color: $white
+            background: $gray
+
+
+      li
+        @media screen and (max-width: 767px)
+          & + li
+            a
+              border-top: 1px solid #ddd
+        &.has-sub
+          @media screen and (max-width: 767px)
+            &.open
+              >a
+                color: $white
+                background: $gray
+
+            position: relative
+            .toggle-sub
+              position: absolute
+              top: 0
+              right: 0
+              padding: 13px 15px
+              border: 1px solid #ddd
+
+
+            .dropdown-menu
+              width: auto
+              transition: all 0s ease
+              margin: 15px
+              border: 1px solid #ddd
+              li:first-child
+                a
+                  border: 0px solid transparent
 
           @media screen and (min-width: 768px)
-            padding: 7px 27px
-            margin: 20px 0px
+            &:hover
+              >a
 
-        .dl-trigger
-          float: right
-          margin: 10px
+              ul.dropdown-menu
+                display: inline-block!important
 
-          @media screen and (min-width: 768px)
-            float: right
+          a
+            i
+              @media screen and (min-width: 768px)
+                margin-left: 5px
+
+
+    .contact
+      &.visible-xs
+        float: left
+        margin: 13px 10px
+        padding: 6px 15px
+        font-size: 12px
+      @media screen and (min-width: 768px)
+        float: right
+      margin: 16px 0px
+
+    .navbar-toggle
+      margin: 13px 15px 13px 0px
+      border-radius: 0px
+      padding: 15px
