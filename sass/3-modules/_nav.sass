@@ -2,6 +2,70 @@
   border: 0px
   border-radius: 0px
 
+  @media (max-width: 991px)
+    .navbar-collapse
+      padding: 0px
+      border: 0px
+      i
+        position: absolute
+        top: -1px
+        right: 0
+        padding: 18px 15px
+        color: $white2
+        border: 1px solid $white2
+      ul
+        li
+          border-bottom: 1px solid $white2
+          a
+            padding: 15px 30px
+            color: $blue
+          &:before
+            content: " "
+            border-left: 5px solid transparent
+            position: absolute
+            left: 0px
+            top: 0
+            height: 100%
+
+          >.dropdown-menu
+            width: 100%
+            height: 0px
+            overflow: hidden
+            border: 0px
+            box-shadow: none
+            background-color: $white3
+            transition: none
+            li
+              position: relative
+              border-bottom: 0px solid $white
+              a
+                font-size: 12px
+                padding: 12px 15px
+                @media (min-width: 480px)
+                  font-size: 1.071em
+          &.open, &.current-menu-item
+            background-color: $white3
+            >a
+              color: $gold
+              background-color: $white3
+            &:before
+              border-left: 5px solid $gold
+              z-index: 1
+            i
+              color: $white
+              background-color: $gold
+              border: 1px solid $gold
+              &:before
+                content: "\f0d8"
+
+            >.dropdown-menu
+              padding: 15px
+              height: auto
+
+          &.open
+            >a
+              border-bottom: 1px solid $white2
+
   .navbar-header
     .navbar-toggle
       padding: 15px
@@ -20,14 +84,17 @@
       @media (min-width: 1200px)
         padding: 7px 15px
         margin: 0px 15px
-
+  .navbar-collapse
+    height: 100vh!important
+    background-color: $white
+    @media (min-width: 992px)
+      height: auto!important
+      padding: 0px
 
   .navbar-nav
     margin: 0px
-    padding: 15px
-    overflow: auto
+    // overflow: auto
     @media (min-width: 992px)
-      overflow: hidden
       padding: 0px
       margin: 0 -15px 0 -15px
 
@@ -38,11 +105,12 @@
       @media (min-width: 1200px)
         margin: 0px 5px
       >a
-        padding: 15px
-        color: $white
+        padding: 10px
+        font-size: 12px
+        @media (min-width: 480px)
+          font-size: 1.071em
         @media (min-width: 992px)
           color: $blue
-        font-size: 1.071em
         @media (min-width: 992px)
           padding: 48px 8px 49px
         @media (min-width: 1200px)
@@ -55,21 +123,13 @@
         .dropdown-menu
           display: none
         &.open
-          .dropdown-menu
-            @media (max-width: 991px)
+          >.dropdown-menu
+            @media (min-width: 992px)
               transition: all 0.3s ease
               width: 100%
               display: inline-block
               position: relative
               background: $white
-              padding: 0px
-        i
-          @media (max-width: 991px)
-            position: absolute
-            top: 0
-            right: 0
-            padding: 17px
-            border: 1px solid $gray
         &:hover
           @media (min-width: 992px)
             >.dropdown-menu
@@ -77,9 +137,10 @@
 
       &.current-menu-item
         a
-          color: $gold
-          border-bottom: 1px solid $gold
-          background: none
+          @media (min-width: 992px)
+            color: $gold
+            border-bottom: 1px solid $gold
+            background: none
 
 @media (max-width: 991px)
   body
@@ -183,3 +244,29 @@
       margin-bottom: 0
       border: none
       box-shadow: none
+
+
+
+@media (max-width: 479px)
+  body
+    &.out
+      left: -250px
+      right: 250px
+
+      nav .navbar-collapse
+        transform: translate3d(-250px, 0, 0)
+  nav
+    &.navbar-fixed-top
+      &.out
+        transform: translate3d(-250px, 0, 0)
+
+  nav .navbar-collapse
+    right: -250px
+    width: 250px
+
+  body.out nav .navbar-collapse
+    transform: translate3d(-250px, 0, 0)
+
+  nav.navbar-fixed-top .navbar-collapse
+    right: -250px !important
+    max-height: none
