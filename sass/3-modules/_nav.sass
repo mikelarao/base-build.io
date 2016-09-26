@@ -3,11 +3,18 @@
   border-radius: 0px
 
   .navbar-header
+    .navbar-toggle
+      padding: 15px
+      border-radius: 0px
+      display: inline-block
+      @media (min-width: 992px)
+        display: none
+
     @media (min-width: 768px)
       float: none
     @media (min-width: 992px)
       float: left
-      
+
     .navbar-brand
       height: auto
       @media (min-width: 1200px)
@@ -16,12 +23,28 @@
 
 
   .navbar-nav
+    margin: 0px
+    padding: 15px
+    overflow: auto
+    @media (min-width: 992px)
+      overflow: hidden
+      padding: 0px
+      margin: 0 -15px 0 -15px
+
     >li
+      width: 100%
+      @media (min-width: 992px)
+        width: auto
       @media (min-width: 1200px)
         margin: 0px 5px
       >a
-        color: $blue
+        padding: 15px
+        color: $white
+        @media (min-width: 992px)
+          color: $blue
         font-size: 1.071em
+        @media (min-width: 992px)
+          padding: 48px 8px 49px
         @media (min-width: 1200px)
           padding: 40px 12px 41px
 
@@ -29,9 +52,28 @@
           color: $gold
 
       &.has-sub
+        .dropdown-menu
+          display: none
+        &.open
+          .dropdown-menu
+            @media (max-width: 991px)
+              transition: all 0.3s ease
+              width: 100%
+              display: inline-block
+              position: relative
+              background: $white
+              padding: 0px
+        i
+          @media (max-width: 991px)
+            position: absolute
+            top: 0
+            right: 0
+            padding: 17px
+            border: 1px solid $gray
         &:hover
-          >.dropdown-menu
-            display: block
+          @media (min-width: 992px)
+            >.dropdown-menu
+              display: block
 
       &.current-menu-item
         a
@@ -39,7 +81,7 @@
           border-bottom: 1px solid $gold
           background: none
 
-@media (max-width: 992px)
+@media (max-width: 991px)
   body
     position: absolute
     left: 0

@@ -4,12 +4,12 @@ $(document).ready(function(){
 
 $(".navbar-nav li").each( function() {
 
-  $(this).has("ul").append("<i class='fa fa-caret-down toggle-sub visible-xs menu-caret'></i>").addClass("has-sub");
+  $(this).has("ul").append("<i class='fa fa-caret-down toggle-sub visible-sm visible-xs menu-caret'></i>").addClass("has-sub");
 
-  $(this).has("ul").find(">a").append(" <i class='fa fa-angle-down hidden-xs menu-caret'></i>");
+  $(this).has("ul").find(">a").append(" <i class='fa fa-angle-down hidden-sm hidden-xs menu-caret'></i>");
 
 });
-
+//
 // $(window).on("resize", function () {
 //
 //   if ( $(window).width() >= 768 ){
