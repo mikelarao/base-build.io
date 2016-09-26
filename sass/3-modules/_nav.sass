@@ -1,110 +1,273 @@
 .navbar
-  position: fixed
-  width: 100%
-  margin-bottom: 0px
-  border: 0px solid red
-  background-color: $white
-  border-radius: 1px
-  z-index: 6
-  box-shadow: 1px 4px 5px rgba(0,0,0,0.2)
+  border: 0px
+  border-radius: 0px
 
-  >.container
-
-    .navbar-header
-      @media screen and (min-width: 768px)
-        // width: 100%
-
-      a.navbar-brand
-        margin-left: 0px
-        height: auto
-        padding: 10px 15px
-
-        img
-          width: 104px
-
-        @media screen and (min-width: 768px)
-          padding: 4px 0px
-
-          img
-            width: auto
-
-    .navbar-nav
-      margin: 15px 0px
-      @media screen and (min-width: 768px)
-        margin: 0px 12px 0px 0px
-      >li
-        >a
-          @media screen and (min-width: 768px)
-            //padding: 37px 12px
-          color: $black
-          border: 0px
-
-      li.current-menu-item, li.current-menu-ancestor
-        >a
-          color: $white
-          background: $gray
-
-      li
-        &:hover, &:focus, &:active
-          >a, >i
-            color: $white
-            background: $gray
-
-
-      li
-        @media screen and (max-width: 767px)
-          & + li
-            a
-              border-top: 1px solid #ddd
-        &.has-sub
-          @media screen and (max-width: 767px)
-            &.open
-              >a
-                color: $white
-                background: $gray
-
-            position: relative
-            .toggle-sub
-              position: absolute
-              top: 0
-              right: 0
-              padding: 13px 15px
-              border: 1px solid #ddd
-
-
-            .dropdown-menu
-              width: auto
-              transition: all 0s ease
-              margin: 15px
-              border: 1px solid #ddd
-              li:first-child
-                a
-                  border: 0px solid transparent
-
-          @media screen and (min-width: 768px)
-            &:hover
-              >a
-
-              ul.dropdown-menu
-                display: inline-block!important
-
+  @media (max-width: 991px)
+    .navbar-collapse
+      padding: 0px
+      border: 0px
+      i
+        position: absolute
+        top: -1px
+        right: 0
+        padding: 18px 15px
+        color: $white2
+        border: 1px solid $white2
+      ul
+        li
+          border-bottom: 1px solid $white2
           a
+            padding: 15px 30px
+            color: $blue
+          &:before
+            content: " "
+            border-left: 5px solid transparent
+            position: absolute
+            left: 0px
+            top: 0
+            height: 100%
+
+          >.dropdown-menu
+            width: 100%
+            height: 0px
+            overflow: hidden
+            border: 0px
+            box-shadow: none
+            background-color: $white3
+            transition: none
+            li
+              position: relative
+              border-bottom: 0px solid $white
+              a
+                font-size: 12px
+                padding: 12px 15px
+                @media (min-width: 480px)
+                  font-size: 1.071em
+          &.open, &.current-menu-item
+            background-color: $white3
+            >a
+              color: $gold
+              background-color: $white3
+            &:before
+              border-left: 5px solid $gold
+              z-index: 1
             i
-              @media screen and (min-width: 768px)
-                margin-left: 5px
+              color: $white
+              background-color: $gold
+              border: 1px solid $gold
+              &:before
+                content: "\f0d8"
 
+            >.dropdown-menu
+              padding: 15px
+              height: auto
 
-    .contact
-      &.visible-xs
-        float: left
-        margin: 13px 10px
-        padding: 6px 15px
-        font-size: 12px
-      @media screen and (min-width: 768px)
-        float: right
-      margin: 16px 0px
+          &.open
+            >a
+              border-bottom: 1px solid $white2
 
+  .navbar-header
     .navbar-toggle
-      margin: 13px 15px 13px 0px
-      border-radius: 0px
       padding: 15px
+      border-radius: 0px
+      display: inline-block
+      @media (min-width: 992px)
+        display: none
+
+    @media (min-width: 768px)
+      float: none
+    @media (min-width: 992px)
+      float: left
+
+    .navbar-brand
+      height: auto
+      @media (min-width: 1200px)
+        padding: 7px 15px
+        margin: 0px 15px
+  .navbar-collapse
+    height: 100vh!important
+    background-color: $white
+    @media (min-width: 992px)
+      height: auto!important
+      padding: 0px
+
+  .navbar-nav
+    margin: 0px
+    // overflow: auto
+    @media (min-width: 992px)
+      padding: 0px
+      margin: 0 -15px 0 -15px
+
+    >li
+      width: 100%
+      @media (min-width: 992px)
+        width: auto
+      @media (min-width: 1200px)
+        margin: 0px 5px
+      >a
+        padding: 10px
+        font-size: 12px
+        @media (min-width: 480px)
+          font-size: 1.071em
+        @media (min-width: 992px)
+          color: $blue
+        @media (min-width: 992px)
+          padding: 48px 8px 49px
+        @media (min-width: 1200px)
+          padding: 40px 12px 41px
+
+        &:hover
+          color: $gold
+
+      &.has-sub
+        .dropdown-menu
+          display: none
+        &.open
+          >.dropdown-menu
+            @media (min-width: 992px)
+              transition: all 0.3s ease
+              width: 100%
+              display: inline-block
+              position: relative
+              background: $white
+        &:hover
+          @media (min-width: 992px)
+            >.dropdown-menu
+              display: block
+
+      &.current-menu-item
+        a
+          @media (min-width: 992px)
+            color: $gold
+            border-bottom: 1px solid $gold
+            background: none
+
+@media (max-width: 991px)
+  body
+    position: absolute
+    left: 0
+    right: 0
+    overflow-x: hidden
+    backface-visibility: hidden
+    transition: all 0.3s ease-in-out
+    transition-delay: 0s
+    &.out
+      left: -300px
+      right: 300px
+      overflow: hidden
+  .container-fluid > .navbar-collapse, .container > .navbar-collapse
+    margin-left: 0
+    margin-right: 0
+  nav
+    &.navbar-fixed-top
+      transition: all 0.3s ease-in-out
+      transition-delay: 0s
+      &.out
+        transform: translate3d(-300px, 0, 0)
+    .navbar-nav
+      margin: 0 -15px 7.5px -15px
+    .navbar-toggle
+      transition: all 500ms ease-in-out
+  body.out nav .navbar-toggle
+    background-color: #ddd
+  nav .navbar-toggle .icon-bar
+    transition: all 500ms ease-in-out
+  body.out nav .navbar-toggle .icon-bar
+    &:nth-of-type(2)
+      transform: translate3d(0, 6px, 0) rotate(45deg)
+    &:nth-of-type(3)
+      opacity: 0
+    &:nth-of-type(4)
+      transform: translate3d(0, -6px, 0) rotate(-45deg)
+  nav .navbar-collapse
+    display: block !important
+    position: fixed
+    top: 0
+    right: -300px
+    bottom: 0
+    z-index: 10000
+    width: 300px
+    height: 100vh !important
+    margin: 0
+    background-color: inherit
+    border: none
+    box-shadow: none
+    border-left: 1px solid #e7e7e7
+    transition: all 0.3s ease-in-out
+  body.out nav .navbar-collapse
+    transform: translate3d(-300px, 0, 0)
+  nav.navbar-fixed-top .navbar-collapse
+    right: -300px !important
+    max-height: none
+  body.out nav.navbar-fixed-top .navbar-collapse
+    transform: none
+    box-shadow: -6px 0px 5px 0px rgba(0,0,0,0.2)
+  nav .navbar-collapse .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover
+    background-color: #eee !important
+  nav
+    .navbar-collapse .dropdown
+      > .dropdown-menu
+        display: block !important
+        position: static
+        float: none
+        max-height: 0
+        margin: 0
+        padding: 0
+        border: none
+        box-shadow: none
+        overflow: hidden
+        transition: all .5s ease-in-out
+        > .dropdown-submenu > .dropdown-menu
+          display: block !important
+          position: static
+          float: none
+          max-height: 0
+          margin: 0
+          padding: 0
+          border: none
+          box-shadow: none
+          overflow: hidden
+          transition: all .5s ease-in-out
+      .dropdown-menu li
+        a, &.dropdown-header
+          padding: 5px 15px 5px 25px
+          color: rgb(119, 119, 119)
+      &.open .dropdown-menu
+        max-height: 100vh
+        > .dropdown-submenu.open > .dropdown-menu
+          max-height: 100vh
+    .dropdown-toggle > .caret
+      transform: rotate(0) !important
+    .open > .dropdown-toggle > .caret
+      transform: rotate(180deg) !important
+    .navbar-form
+      margin-top: 0
+      margin-bottom: 0
+      border: none
+      box-shadow: none
+
+
+
+@media (max-width: 479px)
+  body
+    &.out
+      left: -250px
+      right: 250px
+
+      nav .navbar-collapse
+        transform: translate3d(-250px, 0, 0)
+  nav
+    &.navbar-fixed-top
+      &.out
+        transform: translate3d(-250px, 0, 0)
+
+  nav .navbar-collapse
+    right: -250px
+    width: 250px
+
+  body.out nav .navbar-collapse
+    transform: translate3d(-250px, 0, 0)
+
+  nav.navbar-fixed-top .navbar-collapse
+    right: -250px !important
+    max-height: none
