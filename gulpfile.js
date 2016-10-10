@@ -4,7 +4,7 @@ sass = require('gulp-ruby-sass'),
 plumber = require('gulp-plumber'),
 browserSync = require('browser-sync'),
 rename = require("gulp-rename"),
-sourcemaps = require('gulp-sourcemaps');
+sourcemaps = require('gulp-sourcemaps'),
 autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('scripts', function() {
@@ -27,6 +27,7 @@ gulp.task('styles', function() {
 		stream: true
 	}))
 });
+
 
 gulp.task('browserSync', function() {
 	browserSync({
