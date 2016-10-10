@@ -4,7 +4,8 @@ sass = require('gulp-ruby-sass'),
 plumber = require('gulp-plumber'),
 browserSync = require('browser-sync'),
 rename = require("gulp-rename"),
-sourcemaps = require('gulp-sourcemaps');
+sourcemaps = require('gulp-sourcemaps'),
+hologram = require('gulp-hologram'),
 autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('scripts', function() {
@@ -15,6 +16,11 @@ gulp.task('scripts', function() {
 		suffix: '.min'
 	}))
 	.pipe(gulp.dest('app/assets/js/'))
+});
+
+gulp.task('hologram', function() {
+        gulp.src('config.yml')
+                .pipe(hologram());
 });
 
 gulp.task('styles', function() {

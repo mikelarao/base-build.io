@@ -4,35 +4,35 @@ $(document).ready(function(){
 
 $(".navbar-nav li").each( function() {
 
-  $(this).has("ul").append("<i class='fa fa-caret-down toggle-sub visible-sm visible-xs menu-caret'></i>").addClass("has-sub");
+  $(this).has("ul").append("<i class='fa fa-caret-down toggle-sub visible-xs menu-caret'></i>").addClass("has-sub");
 
-  $(this).has("ul").find(">a").append(" <i class='fa fa-angle-down hidden-sm hidden-xs menu-caret'></i>");
+  $(this).has("ul").find(">a").append("<i class='fa fa-caret-down hidden-xs menu-caret'></i>");
 
 });
-//
-// $(window).on("resize", function () {
-//
-//   if ( $(window).width() >= 768 ){
-//
-//     $(".navbar-nav li:has(ul) .dropdown-menu").each( function() {
-//
-//         var subWidth = $(this).outerWidth();
-//
-//         $(this).css({ "margin-left" : - subWidth / 2 + "px", "left" : "50%", "display" : "none", "width" : subWidth });
-//
-//     });
-//
-//     $(".navbar-nav li:has(ul)").removeClass("open collapsible");
-//
-//   }
-//
-//   else {
-//
-//     $(".dropdown-menu").removeAttr( 'style' );
-//
-//   }
-//
-// }).resize();
+
+$(window).on("resize", function () {
+
+  if ( $(window).width() >= 768 ){
+
+    $(".navbar-nav li:has(ul) .dropdown-menu").each( function() {
+
+        var subWidth = $(this).outerWidth();
+
+        $(this).css({ "margin-left" : - subWidth / 2 + "px", "left" : "50%", "display" : "none", "width" : subWidth });
+
+    });
+
+    $(".navbar-nav li:has(ul)").removeClass("open collapsible");
+
+  }
+
+  else {
+
+    $(".dropdown-menu").removeAttr( 'style' );
+
+  }
+
+}).resize();
 
 $( ".navbar-nav .fa-caret-down" ).on( "click", function() {
 
