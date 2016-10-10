@@ -1,5 +1,5 @@
 body
-  background-color: $blue
+  background-color: $white
 
   *
     transition: all 0.3s ease
@@ -7,7 +7,27 @@ body
 html, body
   height: 100%
 
+.container
+  @media (min-width: 1440px)
+    width: 1300px
 
+.pane
+  padding: 15px 0px
+
+  &--title-bar
+    display: inline-block
+    width: 100%
+    text-align: center
+    margin-bottom: 1em
+    h2
+      @media (min-width: 768px)
+        float: left
+    .btn
+      @media (min-width: 768px)
+        float: right
+
+  &--foot
+    text-align: center
 
 // .container
 //   @media (min-width: 1200px)
@@ -20,14 +40,14 @@ html, body
 .page-wrap
   min-height: 100%
   /* equal to footer height */
-  margin-bottom: -142px
+  margin-bottom: -285px
 
 .page-wrap:after
   content: ""
   display: block
 
 .site-footer, .page-wrap:after
-  height: 142px
+  height: 285px
 
 .site-footer
-  background: orange
+  background: $gray
