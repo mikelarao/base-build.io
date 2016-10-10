@@ -1,0 +1,49 @@
+.hero
+  position: relative
+  background-color: $skyblue
+  img
+    width: 100%
+    opacity: 0.6
+
+  &--contents
+    @media (min-width: 768px)
+      position: absolute
+      bottom: 0
+      width: 100%
+
+    &--caption
+      margin-bottom: 2.857em
+
+      h1
+        font-family: $sfont
+        font-size: 2.429em
+        font-weight: 400
+        margin-bottom: 0
+
+      p
+        color: $white
+        font-size: 1.143em
+
+    &--reservation
+      .top
+        padding: 5px 0
+        background-color: rgba(227, 167, 18, 0.8)
+
+      .bottom
+        padding: 1.143em 0
+        background-color: rgba(255, 255, 255, 0.8)
+        color: $blue
+        font-family: $sfont
+        form
+          text-align: center
+        label
+          font-weight: normal
+          float: left
+          padding: 5px 0px
+          margin: 8px 0px
+        input[type="date"]
+          float: left
+          max-width: 128px
+          border-radius: 1px
+          height: 30px
+          margin: 8px 0px 8px 8px
