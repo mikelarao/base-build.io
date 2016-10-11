@@ -224,6 +224,41 @@
     <div class="site-footer--top">
       <div class="container">
         <div class="row">
+          <div class="col-md-3">
+            <a href="index.html" class="site-footer--top--logo"><img src="assets/images/logo.png" alt="" /></a>
+            <ul class="site-footer--details">
+
+              <li>
+                <p>
+                  <strong>Address:</strong> Lot-9 Brodco Ave., Parañaque,
+                  1701 Metro Manila, Philippines
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <strong>Email:</strong> <a href="mailto:ireene11extremeli@gmail.com" class="mail">ireene11extremeli@gmail.com</a>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <strong>Contact:</strong> <a href="tel:028933812">(02) 893-3812</a>
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 col-md-offset-1">
+            <h5>Navigation Links</h5>
+            <div class="contents">
+              <ul>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -278,16 +313,16 @@
 
 
   $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
+    var scroll = $(window).scrollTop();
 
-       //>=, not <=
-      if (scroll >= 500) {
-          //clearHeader, not clearheader - caps H
-          $(".navbar").addClass("scrolled");
-      }
-      else{
-        $(".navbar").removeClass("scrolled");
-      }
+    //>=, not <=
+    if (scroll >= 500) {
+      //clearHeader, not clearheader - caps H
+      $(".navbar").addClass("scrolled");
+    }
+    else{
+      $(".navbar").removeClass("scrolled");
+    }
   }); //missing );
 
   </script>
