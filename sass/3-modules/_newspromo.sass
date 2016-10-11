@@ -1,14 +1,16 @@
 .newspromo
   &--single
-    margin-bottom: 1em
+    margin-bottom: 3em
+    @media (min-width: 768px)
+      margin-bottom: 2em
     img
       width: 100%
-      height: 235px
       border: 1px solid $gray
       margin-bottom: 1em
     h5
       color: $gold
-      margin: 0
+      margin: 0 0px 5px
+      font-family: $pfont
     h4
       color: $black2
       letter-spacing: 0
@@ -16,9 +18,7 @@
       font-family: $sfont
       display: block
       display: -webkit-box
-      max-width: 400px
       height: 1em*1.6*5
-      margin: 0 auto
       -webkit-line-clamp: 5
       -webkit-box-orient: vertical
       overflow: hidden

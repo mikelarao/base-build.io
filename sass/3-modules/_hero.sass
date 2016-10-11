@@ -3,7 +3,8 @@
   background-color: $skyblue
   img
     width: 100%
-    opacity: 0.6
+    @media (min-width: 768px)
+      opacity: 0.6
 
   &--contents
     @media (min-width: 768px)
@@ -12,7 +13,12 @@
       width: 100%
 
     &--caption
-      margin-bottom: 2.857em
+      padding: 15px 0px
+      @media (max-width: 767px)
+        text-align: center
+      @media (min-width: 768px)
+        padding: 0px
+        margin-bottom: 2.857em
 
       h1
         font-family: $sfont

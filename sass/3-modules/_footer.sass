@@ -1,23 +1,41 @@
 .site-footer
   &--top
     padding: 15px 0px
+    background: $white
+    border-top: 1px solid #d1d1d1
     h5
-      margin: 2em 0px 10px 0px
-      color: $gold
+      margin: 1em 0px
       font-family: $sfont
       text-transform: uppercase
-    .contents
-      border-top: 1px solid $gold
-      padding: 15px 0px
-      ul
-        list-style: none
-        font-family: $sfont
+    ul
+      list-style: none
+      font-family: $sfont
+      li
+        a
+          color: $black
+
+      &.navigation
+        text-align: left
+        margin-bottom: 1em
         li
           a
-            color: $black
+            &:before
+              content: "\f105"
+              font-family: FontAwesome
+              margin-right: 7px
+
+    hr
+      margin: 1em 0 1.5em
+      width: 30px
+      background-color: $gold
+
+    p
+      font-family: $sfont
+
     &--logo
       display: inline-block
-      margin-bottom: 2em
+      @media (min-width: 768px)
+        margin: 5em 0
 
   &--bottom
     background: $gold
@@ -26,6 +44,7 @@
       padding: 0.5em 0
       color: $white
       font-family: $sfont
+      margin: 0px
 
   &--details
     font-family: $sfont
@@ -33,3 +52,18 @@
     li
       p
         margin-bottom: 0px
+        a
+          color: $black2
+          &.mail
+            text-decoration: underline
+
+  .social-icons
+    li
+      float: left
+      margin: 0px 4px
+      img
+        width: 27px
+        height: 27px
+
+    display: inline-block
+    margin: 0px -4px 1em

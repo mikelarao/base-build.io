@@ -28,6 +28,7 @@ html, body
 
   &--foot
     text-align: center
+    margin-bottom: 2em
 
 // .container
 //   @media (min-width: 1200px)
@@ -40,14 +41,13 @@ html, body
 .page-wrap
   min-height: 100%
   /* equal to footer height */
-  margin-bottom: -285px
+  @media (min-width: 768px)
+    margin-bottom: -320px
 
 .page-wrap:after
   content: ""
   display: block
 
 .site-footer, .page-wrap:after
-  height: 285px
-
-.site-footer
-  background: $gray
+  @media (min-width: 768px)
+    height: 320px
