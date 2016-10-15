@@ -1,0 +1,66 @@
+#gallery
+  *
+    transition: none
+
+.gallery
+  display: inline-block
+  width: 100%
+  margin: 2em 0px 0 0px
+  border-top: 1px solid $gray
+
+  &--sort
+    display: inline-block
+    margin-top: -1px
+    width: 100%
+    text-align: center
+
+    label
+      font-family: $sfont
+      padding: 1em 1em
+
+    a
+      display: inline-block
+      border-top: 1px solid transparent
+      padding: 1em 1em
+      color: $black2
+      margin: 0px 4px
+
+      &:hover, &:focus, &:active, &.active
+        color: $gold
+        border-top: 1px solid $gold
+        text-decoration: none
+        outline: none
+        cursor: pointer
+
+  &--container
+    margin: 1em 0px
+
+    .mix
+      display: none
+      margin:
+        top: 15px
+        bottom: 15px
+
+.image-link
+  display: inline-block
+  position: relative
+  width: 100%
+  background-color: $skyblue
+  cursor: pointer
+  outline: none
+  &:hover, &:focus, &:active
+    img
+      opacity: 0.6
+    &:after
+      opacity: 1
+  &:after
+    opacity: 0
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-image: url('../images/enlarge-icon.png')
+    background-position: center
+    background-repeat: no-repeat
+    content: " "

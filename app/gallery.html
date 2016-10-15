@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="shortcut icon" href="favicon.ico"/>
   <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="vendors/magnific/magnific-popup.css"/>
   <link rel="stylesheet" href="vendors/fontawesome/css/font-awesome.min.css"/>
   <link rel="stylesheet" href="assets/css/main.css"/>
   <link rel="stylesheet" href="assets/css/custom.css"/>
@@ -44,7 +45,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li class="current-menu-item active"><a href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about-us.html">About Us</a></li>
           <li><a href="rooms.html">Rooms</a>
             <ul class="dropdown-menu">
@@ -60,7 +61,7 @@
           <li><a href="elegantbanquetsseminars.html">Elegant Banquets/ Seminars</a></li>
           <li><a href="cafefigaro.html">Cafe/Figaro</a></li>
           <li><a href="amenities.html">Amenities</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li class="current-menu-item active"><a href="gallery.html">Gallery</a></li>
           <li><a href="placetogo.html">Place to go</a></li>
           <li><a href="contact-us.html">Contact Us</a></li>
         </ul>
@@ -71,13 +72,13 @@
 
   <div class="page-wrap">
 
-    <section class="hero" style="background-image:url('assets/images/hero-image-1.jpg'); background-position: center center; background-size: cover; background-attachment:fixed;">
+    <section class="hero" style="background-image:url('assets/images/hero-image-1-gallery.jpg'); background-position: center center; background-size: cover; background-attachment:fixed;">
       <div class="hero--contents">
         <div class="hero--contents--caption">
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-5 col-md-offset-7">
-                <h1>Extremeli Suites</h1>
+                <h1>We put a smile back on your face</h1>
                 <p>
                   See what a difference a stay makes
                 </p>
@@ -135,40 +136,15 @@
     </section>
 
 
-    <section class="pane welcome">
+    <section class="pane">
       <div class="container">
-
-        <div class="row">
-          <div class="col-xs-4">
-            <div class="welcome--featured">
-              <img src="assets/images/featured-img-1.jpg" alt="" class="img-responsive"/>
-            </div>
-          </div>
-          <div class="col-xs-4">
-            <div class="welcome--featured">
-              <img src="assets/images/featured-img-2.jpg" alt="" class="img-responsive"/>
-            </div>
-          </div>
-          <div class="col-xs-4">
-            <div class="welcome--featured">
-              <img src="assets/images/featured-img-3.jpg" alt="" class="img-responsive"/>
-            </div>
-          </div>
-        </div>
-
 
         <div class="row">
 
           <div class="col-sm-10 col-sm-offset-1">
             <div class="text-center">
-
-              <h2>Welcome to <span>Extemeli Suites</span></h2>
-              <p>
-                The comfortable Extremeli Suites offers air-conditioned accommodation located close to Phillipine International Convention Center, World Trade Center Manila and Malumpati Cold Spring. The in-house restaurant provides tasty meals.
-              </p>
-              <p>
-                Guests will benefit from karaoke and an outdoor swimming pool.
-              </p>
+              <br>
+              <h2>Image <span>Gallery</span></h2>
 
             </div>
           </div>
@@ -176,58 +152,46 @@
         </div>
 
 
-        <hr>
+        <div class="gallery">
+
+
+          <div class="gallery--sort controls">
+            <label>Filter by:</label>
+            <a class="filter" data-filter="all">All</a>
+            <a class="filter" data-filter=".rooms">Rooms</a>
+            <a class="filter" data-filter=".facility">Facility</a>
+            <a class="filter" data-filter=".dining">Dining</a>
+            <a class="filter" data-filter=".places">Places</a>
+          </div>
+
+          <!-- <div class="pager-list"> -->
+          <!-- Pagination buttons will be generated here -->
+          <!-- </div> -->
+
+          <div id="gallery" class="gallery--container row">
+
+            <div class="mix facility places col-md-3 col-xs-6" data-myorder="1"><a class="image-link" href="assets/images/gallery-img-1.jpg"><img src="assets/images/gallery-img-1.jpg" alt="" /></a></div>
+            <div class="mix facility col-md-3 col-xs-6" data-myorder="2"><a class="image-link" href="assets/images/gallery-img-2.jpg"><img src="assets/images/gallery-img-2.jpg" alt="" /></a></div>
+            <div class="mix places col-md-3 col-xs-6" data-myorder="3"><a class="image-link" href="assets/images/gallery-img-3.jpg"><img src="assets/images/gallery-img-3.jpg" alt="" /></a></div>
+            <div class="mix dining col-md-3 col-xs-6" data-myorder="4"><a class="image-link" href="assets/images/gallery-img-4.jpg"><img src="assets/images/gallery-img-4.jpg" alt="" /></a></div>
+            <div class="mix dining col-md-3 col-xs-6" data-myorder="5"><a class="image-link" href="assets/images/gallery-img-5.jpg"><img src="assets/images/gallery-img-5.jpg" alt="" /></a></div>
+            <div class="mix dining places col-md-3 col-xs-6" data-myorder="6"><a class="image-link" href="assets/images/gallery-img-6.jpg"><img src="assets/images/gallery-img-6.jpg" alt="" /></a></div>
+            <div class="mix facility col-md-3 col-xs-6" data-myorder="7"><a class="image-link" href="assets/images/gallery-img-7.jpg"><img src="assets/images/gallery-img-7.jpg" alt="" /></a></div>
+            <div class="mix dining col-md-3 col-xs-6" data-myorder="8"><a class="image-link" href="assets/images/gallery-img-8.jpg"><img src="assets/images/gallery-img-8.jpg" alt="" /></a></div>
+            <div class="mix rooms col-md-3 col-xs-6" data-myorder="9"><a class="image-link" href="assets/images/gallery-img-9.jpg"><img src="assets/images/gallery-img-9.jpg" alt="" /></a></div>
+            <div class="mix rooms col-md-3 col-xs-6" data-myorder="10"><a class="image-link" href="assets/images/gallery-img-10.jpg"><img src="assets/images/gallery-img-10.jpg" alt="" /></a></div>
+            <div class="mix rooms col-md-3 col-xs-6" data-myorder="11"><a class="image-link" href="assets/images/gallery-img-11.jpg"><img src="assets/images/gallery-img-11.jpg" alt="" /></a></div>
+            <div class="mix facility col-md-3 col-xs-6" data-myorder="12"><a class="image-link" href="assets/images/gallery-img-12.jpg"><img src="assets/images/gallery-img-12.jpg" alt="" /></a></div>
+          </div>
+
+        </div>
 
       </div>
-    </section>
 
-    <section class="pane newspromo">
-      <div class="container">
-        <div class="pane--title-bar">
-          <h2>Upcoming <span>News & Promos</span></h2>
-          <a href="#" class="btn btn-success btn-small hidden-xs">See all news & Promo</a>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="newspromo--single">
-              <img src="assets/images/news-image-1.jpg" alt="" class="img-responsive"/>
-              <h5>November 23, 2015</h5>
-              <h4>Extremeli Standard Suite</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="newspromo--single">
-              <img src="assets/images/news-image-2.jpg" alt="" class="img-responsive"/>
-              <h5>November 23, 2015</h5>
-              <h4>Extremeli Standard Suite</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="newspromo--single">
-              <img src="assets/images/news-image-3.jpg" alt="" class="img-responsive"/>
-              <h5>November 23, 2015</h5>
-              <h4>Extremeli Standard Suite</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="pane--foot visible-xs">
-          <a href="#" class="btn btn-success btn-small">See all news & Promo</a>
-        </div>
-      </div>
     </section>
 
   </div>
+
 
   <footer class="site-footer">
     <div class="site-footer--top">
@@ -333,6 +297,8 @@
 
   <script src="vendors/jquery/dist/jquery.min.js"></script>
   <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendors/mixitup/jquery.mixitup.min.js"></script>
+  <script src="vendors/magnific/jquery.magnific-popup.min.js"></script>
   <script src="assets/js/jquery.placeholder.min.js"></script>
   <script src="assets/js/jquery.reject.min.js"></script>
   <script src="assets/js/main.js"></script>
@@ -383,6 +349,18 @@
       $(".navbar").removeClass("scrolled");
     }
   }); //missing );
+
+  $(function(){
+
+    // Instantiate MixItUp:
+
+    $('#gallery').mixItUp();
+
+  });
+
+  $(document).ready(function() {
+    $('.image-link').magnificPopup({type:'image'});
+  });
 
   </script>
 

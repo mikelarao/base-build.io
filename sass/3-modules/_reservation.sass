@@ -1,0 +1,64 @@
+.hero--contents--reservation
+  .top
+    padding: 5px 0
+    background-color: rgba(227, 167, 18, 0.8)
+    p
+      font-weight: bold
+      color: $white
+      margin-bottom: 0px
+  .bottom
+    padding: 1.143em 0
+    background-color: rgba(255, 255, 255, 0.8)
+    color: $blue
+    font-family: $sfont
+    .form-control-wrap
+      display: inline-block
+      margin-right: 19px
+      float: left
+      @media (max-width: 767px)
+        width: 100%
+        text-align: center
+    form
+      text-align: center
+    label
+      font-weight: normal
+      @media (min-width: 768px)
+        float: left
+      padding: 5px 0px
+      margin: 8px 0px
+    input
+      &[type="date"]
+        @media (max-width: 767px)
+          display: inline
+          &#arrival
+            margin-left: 30px
+        @media (min-width: 768px)
+          float: left
+        max-width: 128px
+        border-radius: 1px
+        height: 30px
+        margin: 8px 0px 8px 8px
+        padding: 15px 5px
+        &:after
+          content: "\f073"
+          font-family: FontAwesome
+          color: $gold
+      &[type="submit"]
+        float: left
+        @media (max-width: 767px)
+          margin: 10px auto 0px
+          float: none
+
+
+  .ll
+    margin: 0 auto
+    padding: 0px 15px
+    width: 100%
+    text-align: center
+    @media (min-width: 768px)
+      text-align: left
+      width: 90%
+    @media (min-width: 992px)
+      width: 70%
+    @media (min-width: 1200px)
+      width: 60%
