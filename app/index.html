@@ -7,6 +7,7 @@
   <link rel="shortcut icon" href="favicon.ico"/>
   <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="vendors/fontawesome/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="vendors/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.min.css"/>
   <link rel="stylesheet" href="assets/css/main.css"/>
   <link rel="stylesheet" href="assets/css/custom.css"/>
   <link rel="stylesheet" href="assets/css/reject.css"/>
@@ -105,6 +106,59 @@
 
               <div class="row">
                 <div class="ll">
+
+
+                  <form method="GET" action="">
+                    <input type="hidden" name="p" value="1">
+                    <div class="row">
+                      <div class="col-md-12">
+
+                        <!-- INPUT DATE RANGE
+                        ================================================== -->
+                        <div class="input-daterange" data-date-format="M d, yyyy">
+                          <div class="row">
+
+                            <!-- ARRIVAL
+                            ================================================== -->
+                            <div class="col-sm-4 col-md-4 col-lg-3 col-lg-offset-2">
+                              <div class="form-group form-group-lg form-group-icon-left booking-widget">
+                                <div class="text-placeholder">
+                                  <i class="fa fa-calendar input-icon input-icon-highlight bookIcon"></i>
+                                  <input class="form-control date-pick no-curve moveText pl40" data-date-format="M d, yyyy" id="check_in_date" name="check_in_date" placeholder="CHECK IN" required="">
+                                </div>
+                              </div>
+                            </div>
+                            <!-- ARRIVAL END
+                            ================================================== -->
+
+                            <!-- DEPARTURE
+                            ================================================== -->
+                            <div class="col-sm-4 col-md-4 col-lg-3">
+                              <div class="form-group form-group-lg form-group-icon-left booking-widget">
+                                <div class="text-placeholder">
+                                  <i class="fa fa-calendar input-icon input-icon-highlight bookIcon"></i>
+                                  <input class="form-control date-pick no-curve moveText pl40" data-date-format="M d, yyyy" id="check_out_date" name="check_out_date" placeholder="CHECK OUT" required="">
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                        <!-- INPUT DATE RANGE END
+                        ================================================== -->
+
+                      </div>
+                    </div>
+
+                    <!-- SUBMIT BUTTON
+                    ================================================== -->
+                    <div class="text-center col-sm-12">
+                      <button class="col-xs-12 col-sm-4 col-md-3 btn btn-primary btn-lg bookwidBtn" style="font-family:avenir; font-size:14px;" type="submit">Book a Room</button>
+                    </div>
+                    <!-- SUBMIT BUTTON END
+                    ================================================== -->
+
+                  </form>
 
                   <form class="" action="index.html" method="post">
 
@@ -335,6 +389,8 @@
   <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/jquery.placeholder.min.js"></script>
   <script src="assets/js/jquery.reject.min.js"></script>
+  <script src="assets/js/bootstrap-datepicker.js"></script>
+  <script src="assets/js/jquery.validate.min.js"></script>
   <script src="assets/js/main.js"></script>
 
   <script>
